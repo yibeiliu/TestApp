@@ -7,6 +7,14 @@ package com.accenture.testapp;
 public class Utils {
 
     public static String getLibName() {
-        return "Hi, I'm from TestApp's Utils!";
+        return "Hi, I'm from TestApp's Utils!1.0.0";
+    }
+
+    public static String getLibNameAndWhen02() {
+        return "second version 1.0.1";
+    }
+
+    public static String getLibNameAndRelease() {
+        return "1.0.3 , " + BuildConfig.BUILD_TYPE;
     }
 }

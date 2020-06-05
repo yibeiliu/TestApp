@@ -1,18 +1,18 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.accenture.testapp"
         minSdkVersion 26
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "1.0.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -32,4 +32,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+}
+
+publish {
+    userOrg = 'yibeiliu'//bintray.com用户名
+    repoName = 'TestApp'   // bintray上仓库的名字
+    groupId = 'com.accentrue.testapp'//jcenter上的路径
+    artifactId = 'TestApp'//项目名称
+    publishVersion = '1.0.3'//版本号
+    desc = 'This is my first Bintray center'// 描述
+    website = 'https://github.com/yibeiliu/TestApp.git'//一般填github 项目地址,一定是要有效的地址
 }
